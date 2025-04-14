@@ -32,7 +32,7 @@
                                 <td>{{ $item->harga }}</td>                                
                                 <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}</td>
                                 <td>
-                                    <a href="{{ route('transaksi.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                                    
                                     <form action="{{ route('transaksi.destroy', $item->id) }}" method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')
